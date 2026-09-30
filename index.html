@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+       <!-- <header> represents the top/header section of the webpage.-->
+    <header class="header">
+        <div class="header-content">
+            <h1>Task Manager</h1>
+            <p>Manage your daily tasks</p>
+        </div>
+    </header>
+         
+    <!--contains the main content of the webpage.    -->
+    <main class="container">
+        <section class="task-section">
+            <h2>Add a Task</h2>
+            <!-- used because the user  is submitting some data.            -->
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a task..."
+                    required
+                >
+    <!-- clicking this button submits the form.  -->
+                <button type="submit">
+                    Add Task
+                </button>
+            </form>
+        </section>
+       
+        <!-- STATISTICS -->
+        <section class="dashboard">
+            <!--Each article represents one independent piece of information.  -->
+            <article class="stat-card">
+                <h3>Total</h3>
+                <p id="totalTasks">0</p>
+            </article>
+            <article class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </article>
+            <article class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </article>
+        </section>
+
+        <!--TASK LIST-->
+        <section class="tasks-section">
+            <div class="section-header">
+                <h2>My Tasks</h2>
+                <button id="clearBtn">
+                    Clear All
+                </button>
+            </div>
+
+            <!--JavaScript will dynamically add <li> elements inside this <ul>-->
+            <ul id="taskList"></ul>
+        </section>
+
+    </main>
+    <!--Footer is another semantic HTML element-->
+    <footer class="footer">
+        <p>Task Manager — Trial</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
